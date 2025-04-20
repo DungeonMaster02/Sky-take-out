@@ -20,10 +20,10 @@ This is a learning project called "Sky Takeout". It aims to practice the full de
 (3)sku-pojo:
  This module contains **Java entity classes**, including **POJOs**, **VOs (View Objects)**, and **DTOs (Data Transfer Objects)**. It defines the data models used throughout the application for database mapping, API responses, and inter-layer communication.
 
-  - **Entity/**: Contains basic entity classes that map to database tables.
-  - **DTO/**: Defines Data Transfer Objects used to receive or send data between layers.
-  - **VO/**: Holds View Objects used to shape data sent to the frontend.
-  - **POJO/**: Contains simple plain Java objects used across different layers, including the three modules above.
+  - **Entity**: Contains basic entity classes that map to database tables.
+  - **DTO**: Defines Data Transfer Objects used to receive or send data between layers.
+  - **VO**: Holds View Objects used to shape data sent to the frontend.
+  - **POJO**: Contains simple plain Java objects used across different layers, including the three modules above.
 
  (4)sky-server:
  This is the **main backend module** of the project. It contains the core business logic and typical Spring Boot structure, including Configuration files, Controller, Service, Mapper.etc
