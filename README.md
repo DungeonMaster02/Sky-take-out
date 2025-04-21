@@ -62,3 +62,5 @@ This is the **main backend module** of the project. It contains the core busines
 - Controllers (for handling HTTP requests)  
 - Services (business logic layer)  
 - Mappers (MyBatis Plus for database access)
+
+Run sky-take-out\sky-server\src\main\java\com\sky\SkyApplication.java, switch on the backend
