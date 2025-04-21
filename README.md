@@ -18,7 +18,35 @@ This is a learning project called **Sky Takeout**, designed to help you practice
 1. Run `nginx.exe` located in the `nginx-1.20.2` folder to launch the Nginx service.  
 2. Open your browser and visit [http://localhost:9090](http://localhost:9090) to access the frontend interface.
 
-### 3.2 Backend Structure
+### 3.2 Database
+
+The database schema and initial data are provided in the SQL file:
+/database/sky.sql
+
+To set up the database:
+
+Launch MySQL Workbench and connect to your local MySQL instance (e.g., localhost:3306 with user root).
+
+Click "Server" > "Data Import"
+
+Select Import from Self-Contained File, then choose:
+
+sky.sql
+
+(Under Default Target Schema, select or create a schema named sky_take_out.)
+
+Click Start Import to load the schema and data.
+
+#### ⚠️ Admin Login Reminder
+
+The default admin password stored in the database is **MD5-hashed**.
+
+- **Stored in DB**: `e10adc3949ba59abbe56e057f20f883e`
+- **Actual password to input**: `123456`
+
+✅ No need to hash it manually — the backend encrypts it automatically when you log in.
+
+### 3.3 Backend Structure
 
 The backend consists of a multi-module Maven project. Below is the structure and purpose of each module:
 
@@ -63,4 +91,7 @@ This is the **main backend module** of the project. It contains the core busines
 - Services (business logic layer)  
 - Mappers (MyBatis Plus for database access)
 
-Run sky-take-out\sky-server\src\main\java\com\sky\SkyApplication.java, switch on the backend
+#### ⚠️ Change the password in application-dev.yml to your SQL password. If it is a numeric password, you need to use " "
+
+
+Compile sky-take-out and Run sky-server\src\main\java\com\sky\SkyApplication.java, switch on the backend
